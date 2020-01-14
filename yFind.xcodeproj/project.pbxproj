@@ -14,6 +14,7 @@
 		D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AA1E4D2AF800D6104E /* Main.storyboard */; };
 		D9B060AE1E4D2AF800D6104E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AD1E4D2AF800D6104E /* Assets.xcassets */; };
 		D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */; };
+		E7426A9323CE1AEF0061AFD7 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +50,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA8A0DC23CCCA0B0034B75C /* ArcGIS.framework in Frameworks */,
+				E7426A9323CE1AEF0061AFD7 /* ArcGIS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

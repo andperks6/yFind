@@ -29,14 +29,13 @@ class ViewController: UIViewController {
     
     private func setupMap() {
         let baseBackdrop = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=850db44b9eb845d3bd42b19e8aa7a024")!
-        let BYUbase = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=b25c40061a764eca87da3ab9de9256b6")!
+        let byuBase = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=b25c40061a764eca87da3ab9de9256b6")!
+        let byuBuildingTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/Campus_Buildings/FeatureServer/0")!)
+        let byuBuildingLayer = AGSFeatureLayer(featureTable: byuBuildingTable)
         
         let baseBackdropLayer = AGSArcGISVectorTiledLayer(url: baseBackdrop)
-        let BYUBaseLayer = AGSArcGISVectorTiledLayer(url: BYUbase)
+        let byuBaseLayer = AGSArcGISVectorTiledLayer(url: byuBase)
 
-//        let map = AGSMap(
-//            //            basemap: AGSBasemap(baseLayer: vectorTiledLayer),
-//        )
         mapView.map = AGSMap(
             //            basemap: AGSBasemap(baseLayer: vectorTiledLayer),
             basemapType: .navigationVector,
@@ -44,7 +43,13 @@ class ViewController: UIViewController {
             longitude: -111.649278,
             levelOfDetail: 15
         )
-        mapView.map?.basemap = AGSBasemap(baseLayers: [baseBackdropLayer, BYUBaseLayer], referenceLayers: [])
+        
+        mapView.map!.operationalLayers.add(byuBuildingLayer)
+        
+        
+        
+        
+        //mapView.map?.basemap = AGSBasemap(baseLayers: [baseBackdropLayer, BYUBaseLayer], referenceLayers: [])
         
         
     }
