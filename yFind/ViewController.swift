@@ -31,8 +31,10 @@ class ViewController: UIViewController {
         let baseBackdrop = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=850db44b9eb845d3bd42b19e8aa7a024")!
         let byuBase = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=b25c40061a764eca87da3ab9de9256b6")!
         let byuBuildingTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/Campus_Buildings/FeatureServer/0")!)
-        let byuBuildingLayer = AGSFeatureLayer(featureTable: byuBuildingTable)
+        let byuIndoorTable = AGSServiceFeatureTable(url: URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/Floorplans_V/FeatureServer/0")!)
         
+        let byuIndoorLayer = AGSFeatureLayer(featureTable: byuIndoorTable)
+        let byuBuildingLayer = AGSFeatureLayer(featureTable: byuBuildingTable)
         let baseBackdropLayer = AGSArcGISVectorTiledLayer(url: baseBackdrop)
         let byuBaseLayer = AGSArcGISVectorTiledLayer(url: byuBase)
 
@@ -45,6 +47,7 @@ class ViewController: UIViewController {
         )
         
         mapView.map!.operationalLayers.add(byuBuildingLayer)
+        mapView.map!.operationalLayers.add(byuIndoorLayer)
         
         
         
