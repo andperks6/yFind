@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: AGSMapView!
     
-    
+
     //    let url = URLComponents(
     //        string: "https://www.arcgis.com/home/item.html",
     //        queryItems = [URLQueryItem(name: "id", value: "7092e11ebd75439fa84cbab1e4c1f9ec")])
