@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="34" y="-558"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Building-->
         <scene sceneID="BPy-kw-1mO">
             <objects>
-                <viewController id="FSV-ww-gA2" sceneMemberID="viewController">
+                <viewController id="FSV-ww-gA2" customClass="SearchBuilding" customModule="yFind" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NIY-RL-u0l"/>
                         <viewControllerLayoutGuide type="bottom" id="pqL-OZ-FXv"/>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="-679" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Room-->
         <scene sceneID="w55-bN-cgf">
             <objects>
-                <viewController id="44Z-Dt-JSd" sceneMemberID="viewController">
+                <viewController id="44Z-Dt-JSd" customClass="SearchRoom" customModule="yFind" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EGp-Yq-exi"/>
                         <viewControllerLayoutGuide type="bottom" id="1ld-f5-Uwh"/>
@@ -137,10 +137,10 @@
             </objects>
             <point key="canvasLocation" x="33" y="151"/>
         </scene>
-        <!--View Controller-->
+        <!--Search Room-->
         <scene sceneID="ykD-8c-dJW">
             <objects>
-                <viewController id="nvq-Df-fl8" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="nvq-Df-fl8" customClass="SearchRoom" customModule="yFind" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dvX-H1-DVv"/>
                         <viewControllerLayoutGuide type="bottom" id="dpK-5C-6Fp"/>
