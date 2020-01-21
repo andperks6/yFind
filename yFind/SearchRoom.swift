@@ -14,4 +14,7 @@ class SearchRoom: UIViewController {
         super.viewDidLoad()
     }
     
+    @IBAction func backToRoomSelect(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }

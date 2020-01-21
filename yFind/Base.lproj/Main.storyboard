@@ -170,6 +170,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="backToRoomSelect:" destination="nvq-Df-fl8" eventType="touchUpInside" id="9gU-eR-TpR"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go to *Room*" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-gf-r7Z">
                                 <rect key="frame" x="134" y="107" width="106" height="21"/>
