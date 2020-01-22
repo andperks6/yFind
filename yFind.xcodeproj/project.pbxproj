@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */; };
+		2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */; };
 		2AA8A0DC23CCCA0B0034B75C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; };
 		2AA8A0DD23CCCA0B0034B75C /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A61E4D2AF800D6104E /* AppDelegate.swift */; };
@@ -34,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FLQuery.storyboard; sourceTree = "<group>"; };
+		2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLQueryViewController.swift; sourceTree = "<group>"; };
 		2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
 		2AA8A0D823CCC67B0034B75C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks; sourceTree = "<group>"; };
 		D9B060A31E4D2AF800D6104E /* yFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,8 @@
 		D9B060A51E4D2AF800D6104E /* yFind */ = {
 			isa = PBXGroup;
 			children = (
+				2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */,
+				2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */,
 				D9B060A61E4D2AF800D6104E /* AppDelegate.swift */,
 				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
 				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
@@ -167,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */,
+				2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */,
 				D9B060AE1E4D2AF800D6104E /* Assets.xcassets in Resources */,
 				D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */,
 			);
@@ -200,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */,
+				2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */,
 				D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */,
 				E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */,
 				E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */,

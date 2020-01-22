@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -44,7 +44,7 @@
         <!--Search Building-->
         <scene sceneID="BPy-kw-1mO">
             <objects>
-                <viewController id="FSV-ww-gA2" customClass="SearchBuilding" customModule="yFind" sceneMemberID="viewController">
+                <viewController id="FSV-ww-gA2" customClass="SearchBuilding" customModule="yFind" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="NIY-RL-u0l"/>
                         <viewControllerLayoutGuide type="bottom" id="pqL-OZ-FXv"/>
@@ -53,15 +53,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-YA-F0i">
+                            <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Enter Name or Acronym" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-YA-F0i">
                                 <rect key="frame" x="0.0" y="100" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.088988964970000001" green="0.15511528890000001" blue="0.32251862050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" red="0.01390729286" green="0.14689245819999999" blue="0.27754491570000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" textContentType="location"/>
                             </searchBar>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-Rc-fYV">
-                                <rect key="frame" x="140" y="213" width="95" height="49"/>
+                                <rect key="frame" x="140" y="167" width="95" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
@@ -87,7 +87,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9k-zT-c3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-679" y="151"/>
+            <point key="canvasLocation" x="-679.20000000000005" y="150.67466266866569"/>
         </scene>
         <!--Search Room-->
         <scene sceneID="w55-bN-cgf">
