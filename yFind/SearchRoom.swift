@@ -30,5 +30,8 @@ class SearchRoom: UIViewController {
     @IBAction func roomButtonAction(_ sender: Any) {
         self.performSegue(withIdentifier: "roomSegue", sender: self)
     }
-    
+
+    @IBAction func backToRoomSelect(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
