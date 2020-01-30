@@ -39,7 +39,7 @@
 /* Begin PBXFileReference section */
 		2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FLQuery.storyboard; sourceTree = "<group>"; };
 		2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLQueryViewController.swift; sourceTree = "<group>"; };
-		2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
+		2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
 		2AA8A0D823CCC67B0034B75C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks; sourceTree = "<group>"; };
 		D9B060A31E4D2AF800D6104E /* yFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B060A61E4D2AF800D6104E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };

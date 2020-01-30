@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -53,41 +53,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gF-YA-F0i">
-                                <rect key="frame" x="16" y="100" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y3G-Rc-fYV">
-                                <rect key="frame" x="140" y="167" width="95" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
-                                </state>
-                                <connections>
-                                    <action selector="bldgButtonAction:" destination="FSV-ww-gA2" eventType="touchUpInside" id="5HJ-Nz-M5d"/>
-                                    <action selector="yesButton:" destination="N5s-zi-lDH" eventType="touchUpInside" id="ON9-57-hQK"/>
-                                    <segue destination="44Z-Dt-JSd" kind="show" identifier="bldgSegue" id="4p5-3o-jUe"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a Building Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7X-Sc-nRy">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Building Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7X-Sc-nRy">
                                 <rect key="frame" x="103" y="50" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bDE-WH-2p1">
+                                <rect key="frame" x="11" y="79" width="353" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="JFR-7U-rzt"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-dE-Udb">
+                                <rect key="frame" x="11" y="125" width="353" height="299"/>
+                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="UMd-aD-YS6">
+                                        <rect key="frame" x="0.0" y="28" width="353" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UMd-aD-YS6" id="TeP-dY-3jM">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.13577114313196084" blue="0.28175599093264247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bDE-WH-2p1" firstAttribute="top" secondItem="H7X-Sc-nRy" secondAttribute="bottom" constant="8" id="10u-02-KKt"/>
+                            <constraint firstAttribute="trailing" secondItem="bDE-WH-2p1" secondAttribute="trailing" constant="11" id="5wv-EI-s7h"/>
+                            <constraint firstItem="pqL-OZ-FXv" firstAttribute="top" secondItem="B1U-dE-Udb" secondAttribute="bottom" constant="243" id="G8W-uS-srA"/>
+                            <constraint firstItem="B1U-dE-Udb" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leading" constant="11" id="Lag-OO-Z1c"/>
+                            <constraint firstItem="H7X-Sc-nRy" firstAttribute="top" secondItem="NIY-RL-u0l" secondAttribute="bottom" constant="50" id="Z1p-2h-zdd"/>
+                            <constraint firstItem="H7X-Sc-nRy" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leadingMargin" constant="87" id="gdl-dL-Gcq"/>
+                            <constraint firstAttribute="trailing" secondItem="B1U-dE-Udb" secondAttribute="trailing" constant="11" id="oYy-cF-kfA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H7X-Sc-nRy" secondAttribute="trailing" constant="87" id="omT-rt-F0z"/>
+                            <constraint firstItem="bDE-WH-2p1" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leading" constant="11" id="tIZ-5g-9kq"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="bldgInput" destination="7gF-YA-F0i" id="nJk-4I-w7I"/>
+                        <outlet property="searchContainerView" destination="bDE-WH-2p1" id="VO6-ft-bFU"/>
+                        <outlet property="tableView" destination="B1U-dE-Udb" id="iPK-fR-AQB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9k-zT-c3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -103,7 +112,7 @@
                         <viewControllerLayoutGuide type="bottom" id="1ld-f5-Uwh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zja-QC-8cF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-A5-UQd">
