@@ -19,6 +19,7 @@ class SearchBuilding: UIViewController {
     var searchController: UISearchController!
     var originalDataSource: [String] = []
     var currentDataSource: [String] = []
+    var selectedRow: String = ""
     
     private var featureTable: AGSServiceFeatureTable?
     private var selectedFeatures = [AGSFeature]()
@@ -26,13 +27,19 @@ class SearchBuilding: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addBuildingToDataSource(buildingCount: 15, Building: "MARB")
+        let indoorurl = URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/BYU_Campus_Buildings/FeatureServer/0")!
+        self.featureTable = AGSServiceFeatureTable(url: indoorurl)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        
+        //addBuildingToDataSource(buildingCount: 15, Building: "MARB")
+        
+        originalDataSource = selectFeaturesForSearchTerm("")
         
         currentDataSource = originalDataSource
         
+        tableView.delegate = self
+        tableView.dataSource = self
+
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
@@ -40,11 +47,6 @@ class SearchBuilding: UIViewController {
         searchController.searchBar.delegate = self
         
 
-        
-        let indoorurl = URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/BYU_Campus_Buildings/FeatureServer/0")!
-        
-        self.featureTable = AGSServiceFeatureTable(url: indoorurl)
-        selectFeaturesForSearchTerm("")
 //        searchController.searchResultsUpdater = self
 //        searchController.hidesNavigationBarDuringPresentation = false
 //        searchController.dimsBackgroundDuringPresentation = false
@@ -78,10 +80,10 @@ class SearchBuilding: UIViewController {
         tableView.reloadData()
     }
     
-    func selectFeaturesForSearchTerm(_ searchTerm: String) {
+    func selectFeaturesForSearchTerm(_ searchTerm: String) -> [String]{
         print("at least this prints")
         guard let featureTable = featureTable else {
-                return
+                return []
         }
         
         // deselect all selected features
@@ -108,6 +110,7 @@ class SearchBuilding: UIViewController {
                     // display the selection
                     for feature in features{
                         print(feature.attributes)
+                        self.originalDataSource.append(feature.attributes.value(forKey: "Name") as! String)
                     }
 //                    print("featurelist: ", features)
                     
@@ -121,8 +124,13 @@ class SearchBuilding: UIViewController {
                 
                 // update selected features array
                 self.selectedFeatures = features
+                
             }
+            
         }
+        
+        return self.originalDataSource
+        
     }
 //    func updateSearchResults(for searchController: UISearchController) {
 //
@@ -131,7 +139,7 @@ class SearchBuilding: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "bldgSegue"){
                 let displayVC = segue.destination as! SearchRoom
-                displayVC.bldg = bldgInput.text
+            displayVC.bldg = self.selectedRow
         }
     }
     
@@ -154,11 +162,14 @@ extension SearchBuilding: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        self.selectedRow = currentDataSource[indexPath.row]
+        
         let alertController = UIAlertController(title: "Selection", message: "Selected \(currentDataSource[indexPath.row])", preferredStyle: .alert)
         
         searchController.isActive = false
         
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {_ in
+            self.performSegue(withIdentifier: "bldgSegue", sender: nil)})
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
         
