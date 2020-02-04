@@ -118,41 +118,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNg-A5-UQd">
-                                <rect key="frame" x="16" y="100" width="343" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <color key="barTintColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6a-ZI-BPq">
-                                <rect key="frame" x="140" y="192" width="95" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
-                                <state key="normal" title="Go">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <action selector="roomButtonAction:" destination="44Z-Dt-JSd" eventType="touchUpInside" id="NZz-I9-N8q"/>
-                                    <action selector="yesButton:" destination="N5s-zi-lDH" eventType="touchUpInside" id="Gui-26-Hof"/>
-                                    <segue destination="nvq-Df-fl8" kind="show" identifier="roomSegue" id="I6e-0f-4vK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter a Room Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqm-bc-25K">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter a Room Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iqm-bc-25K">
                                 <rect key="frame" x="103" y="53" width="169" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rTZ-2J-842">
+                                <rect key="frame" x="11" y="126" width="353" height="395"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="kQo-py-97f">
+                                        <rect key="frame" x="0.0" y="28" width="353" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kQo-py-97f" id="8T3-4c-DZe">
+                                            <rect key="frame" x="0.0" y="0.0" width="353" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rJo-1w-ZbK">
+                                <rect key="frame" x="11" y="88" width="353" height="45"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="b7L-xQ-nwd"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.13577114309999999" blue="0.28175599089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rTZ-2J-842" firstAttribute="centerY" secondItem="zja-QC-8cF" secondAttribute="centerY" id="AMB-4Y-C4J"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="top" secondItem="zja-QC-8cF" secondAttribute="top" constant="88" id="IIq-X5-Guj"/>
+                            <constraint firstItem="rTZ-2J-842" firstAttribute="top" secondItem="rJo-1w-ZbK" secondAttribute="bottom" constant="-7" id="Jrb-HV-3Si"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="leading" secondItem="zja-QC-8cF" secondAttribute="leadingMargin" constant="-5" id="cBi-3f-qX7"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="centerX" secondItem="Iqm-bc-25K" secondAttribute="centerX" id="cWh-8C-1oc"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="top" secondItem="Iqm-bc-25K" secondAttribute="bottom" constant="14" id="jAT-9S-IfQ"/>
+                            <constraint firstItem="rTZ-2J-842" firstAttribute="centerX" secondItem="zja-QC-8cF" secondAttribute="centerX" id="vFI-Dr-ucP"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="trailing" secondItem="rTZ-2J-842" secondAttribute="trailing" id="vmc-xB-p8L"/>
+                            <constraint firstItem="rJo-1w-ZbK" firstAttribute="leading" secondItem="rTZ-2J-842" secondAttribute="leading" id="yEm-Y8-zWk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="rlB-pe-00d"/>
                     <connections>
-                        <outlet property="roomInput" destination="oNg-A5-UQd" id="nhS-bg-WEb"/>
+                        <outlet property="searchContainerView" destination="rJo-1w-ZbK" id="fT5-OJ-33g"/>
+                        <outlet property="tableView" destination="rTZ-2J-842" id="g8X-Ya-VTH"/>
+                        <segue destination="nvq-Df-fl8" kind="show" identifier="roomSegue" id="BpU-Ab-h8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCo-sP-Nju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
