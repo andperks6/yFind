@@ -9,17 +9,16 @@
 /* Begin PBXBuildFile section */
 		2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */; };
 		2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */; };
-		2AA8A0DC23CCCA0B0034B75C /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; };
-		2AA8A0DD23CCCA0B0034B75C /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A61E4D2AF800D6104E /* AppDelegate.swift */; };
 		D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A81E4D2AF800D6104E /* ViewController.swift */; };
 		D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AA1E4D2AF800D6104E /* Main.storyboard */; };
 		D9B060AE1E4D2AF800D6104E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AD1E4D2AF800D6104E /* Assets.xcassets */; };
 		D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */; };
-		E7426A9323CE1AEF0061AFD7 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */; };
 		E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EA23D265E300AE1924 /* SearchBuilding.swift */; };
 		E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EC23D2660400AE1924 /* SearchRoom.swift */; };
 		E77F100123D89F65000839DD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F100023D89F65000839DD /* ConfirmationView.swift */; };
+		E7F2E08C23E9C865006C60EC /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2E08B23E9C865006C60EC /* ArcGIS.framework */; };
+		E7F2E08D23E9C865006C60EC /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2E08B23E9C865006C60EC /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,7 +28,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				2AA8A0DD23CCCA0B0034B75C /* ArcGIS.framework in Embed Frameworks */,
+				E7F2E08D23E9C865006C60EC /* ArcGIS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,8 +38,6 @@
 /* Begin PBXFileReference section */
 		2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FLQuery.storyboard; sourceTree = "<group>"; };
 		2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLQueryViewController.swift; sourceTree = "<group>"; };
-		2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
-		2AA8A0D823CCC67B0034B75C /* Frameworks */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Frameworks; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks; sourceTree = "<group>"; };
 		D9B060A31E4D2AF800D6104E /* yFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B060A61E4D2AF800D6104E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B060A81E4D2AF800D6104E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,11 +45,10 @@
 		D9B060AD1E4D2AF800D6104E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B060B01E4D2AF800D6104E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B060B21E4D2AF800D6104E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E741471523A9C3D500B518A8 /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../../../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
 		E75316EA23D265E300AE1924 /* SearchBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilding.swift; sourceTree = "<group>"; };
 		E75316EC23D2660400AE1924 /* SearchRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoom.swift; sourceTree = "<group>"; };
-		E75316EE23D5641900AE1924 /* ArcGIS_Runtime_SDK_iOS_100_7_0.pkg */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.installer-pkg"; name = ArcGIS_Runtime_SDK_iOS_100_7_0.pkg; path = ../../../Downloads/ArcGIS_Runtime_SDK_iOS_100_7_0.pkg; sourceTree = "<group>"; };
 		E77F100023D89F65000839DD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
+		E7F2E08B23E9C865006C60EC /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AA8A0DC23CCCA0B0034B75C /* ArcGIS.framework in Frameworks */,
-				E7426A9323CE1AEF0061AFD7 /* ArcGIS.framework in Frameworks */,
+				E7F2E08C23E9C865006C60EC /* ArcGIS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,10 +101,7 @@
 		E721D10E23A9BE7B00CA86B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E75316EE23D5641900AE1924 /* ArcGIS_Runtime_SDK_iOS_100_7_0.pkg */,
-				2AA8A0D823CCC67B0034B75C /* Frameworks */,
-				2AA8A0D423CCC5D50034B75C /* ArcGIS.framework */,
-				E741471523A9C3D500B518A8 /* ArcGIS.framework */,
+				E7F2E08B23E9C865006C60EC /* ArcGIS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

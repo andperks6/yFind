@@ -30,9 +30,6 @@ class SearchBuilding: UIViewController {
         let indoorurl = URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/BYU_Campus_Buildings/FeatureServer/0")!
         self.featureTable = AGSServiceFeatureTable(url: indoorurl)
         
-        
-        //addBuildingToDataSource(buildingCount: 15, Building: "MARB")
-        
         originalDataSource = selectFeaturesForSearchTerm("")
         
         currentDataSource = originalDataSource
@@ -45,13 +42,7 @@ class SearchBuilding: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchContainerView.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
-        
 
-//        searchController.searchResultsUpdater = self
-//        searchController.hidesNavigationBarDuringPresentation = false
-//        searchController.dimsBackgroundDuringPresentation = false
-//        searchController.searchBar.sizeToFit()
-//        self.tableView.tableHeaderView = searchController.searchBar
     }
     
     func addBuildingToDataSource(buildingCount: Int, Building: String) {
@@ -112,14 +103,9 @@ class SearchBuilding: UIViewController {
                         print(feature.attributes)
                         self.originalDataSource.append(feature.attributes.value(forKey: "Name") as! String)
                     }
-//                    print("featurelist: ", features)
                     
                 } else {
-                    //no matches
-//                    if let fullExtent = featureLayer.fullExtent {
-//                        // no matches, zoom to show everything in the layer
-//                        self.mapView.setViewpointGeometry(fullExtent, padding: 50)
-//                    }
+
                 }
                 
                 // update selected features array
@@ -132,9 +118,6 @@ class SearchBuilding: UIViewController {
         return self.originalDataSource
         
     }
-//    func updateSearchResults(for searchController: UISearchController) {
-//
-//    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "bldgSegue"){
@@ -195,11 +178,6 @@ extension SearchBuilding: UISearchBarDelegate {
             if let searchText = searchBar.text {
                 filterCurrentDataSource(searchTerm: searchText)
             }
-    //        print("search clicked!")
-    //        if let text = searchBar.text {
-    //            selectFeaturesForSearchTerm(text)
-    //        }
-    //        searchBar.resignFirstResponder()
         }
 
         func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
@@ -208,6 +186,5 @@ extension SearchBuilding: UISearchBarDelegate {
             if let searchText = searchBar.text, !searchText.isEmpty {
                 restoreCurrentDataSource()
             }
-    //        searchBar.resignFirstResponder()
         }
 }
