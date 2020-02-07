@@ -6,7 +6,7 @@
 //  Copyright © 2020 Esri. All rights reserved.
 //
 
-import Foundation
+import Foundation 
 import UIKit
 import ArcGIS
 
@@ -18,8 +18,8 @@ class SearchBuilding: UIViewController {
     
     var searchController: UISearchController!
     var originalDataSource: [String] = []
-    var currentDataSource: [String] = []
-    var selectedRow: String = ""
+    var currentDataSource: [(String, String)] = []
+    var selectedRow: (String, String) = ("","")
     
     private var featureTable: AGSServiceFeatureTable?
     private var selectedFeatures = [AGSFeature]()
@@ -30,9 +30,8 @@ class SearchBuilding: UIViewController {
         let indoorurl = URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/BYU_Campus_Buildings/FeatureServer/0")!
         self.featureTable = AGSServiceFeatureTable(url: indoorurl)
         
-        originalDataSource = selectFeaturesForSearchTerm("")
-        
-        currentDataSource = originalDataSource
+//        currentDataSource
+        selectFeaturesForSearchTerm("")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -42,7 +41,6 @@ class SearchBuilding: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchContainerView.addSubview(searchController.searchBar)
         searchController.searchBar.delegate = self
-
     }
     
     func addBuildingToDataSource(buildingCount: Int, Building: String) {
@@ -51,41 +49,20 @@ class SearchBuilding: UIViewController {
         }
     }
     
-    func filterCurrentDataSource(searchTerm: String) {
-        
-        if searchTerm.count > 0 {
-            
-            currentDataSource = originalDataSource
-            
-            let filteredResults = currentDataSource.filter {$0.replacingOccurrences(of: " ", with: "").lowercased().contains(searchTerm.replacingOccurrences(of: " ", with: "").lowercased())
-            }
-            
-            currentDataSource = filteredResults
-            tableView.reloadData()
-            
-        }
-    }
-    
-    func restoreCurrentDataSource() {
-        currentDataSource = originalDataSource
-        tableView.reloadData()
-    }
-    
-    func selectFeaturesForSearchTerm(_ searchTerm: String) -> [String]{
-        print("at least this prints")
+    func selectFeaturesForSearchTerm(_ searchTerm: String) {
         guard let featureTable = featureTable else {
-                return []
+                return
         }
-        
+        print("searching: ", searchTerm)
         // deselect all selected features
         if !selectedFeatures.isEmpty {
             selectedFeatures.removeAll()
         }
         
         let queryParams = AGSQueryParameters()
-        queryParams.whereClause = "upper(Name) LIKE '%\(searchTerm.uppercased())%' OR Upper(Acronym) LIKE '%\(searchTerm.uppercased())%'"
-        
-        featureTable.queryFeatures(with: queryParams) { [weak self] (result: AGSFeatureQueryResult?, error: Error?) in
+        queryParams.whereClause = "(upper(Name) LIKE '%\(searchTerm.uppercased())%' OR Upper(Acronym) LIKE '%\(searchTerm.uppercased())%') AND Acronym != '' "
+        queryParams.orderByFields = [AGSOrderBy(fieldName: "Acronym", sortOrder: .ascending)]
+            featureTable.queryFeatures(with: queryParams) { [weak self] (result: AGSFeatureQueryResult?, error: Error?) in
             guard let self = self else {
                 return
             }
@@ -98,31 +75,28 @@ class SearchBuilding: UIViewController {
                 
             } else if let features = result?.featureEnumerator().allObjects {
                 if !features.isEmpty {
+                    self.currentDataSource = []
                     // display the selection
                     for feature in features{
-                        print(feature.attributes)
-                        self.originalDataSource.append(feature.attributes.value(forKey: "Name") as! String)
+                        let acronym = feature.attributes.value(forKey: "Acronym")
+                        let name = feature.attributes.value(forKey: "Name" )
+                        self.currentDataSource.append((acronym as! String, name as! String))
                     }
-                    
+                    self.tableView.reloadData()
                 } else {
 
                 }
-                
                 // update selected features array
                 self.selectedFeatures = features
-                
             }
-            
         }
-        
-        return self.originalDataSource
-        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "bldgSegue"){
                 let displayVC = segue.destination as! SearchRoom
-            displayVC.bldg = self.selectedRow
+            displayVC.bldg = self.selectedRow.1
+            displayVC.acronym = self.selectedRow.0
         }
     }
     
@@ -135,7 +109,7 @@ extension SearchBuilding: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         
         if let searchText = searchController.searchBar.text {
-            filterCurrentDataSource(searchTerm: searchText)
+            selectFeaturesForSearchTerm(searchText)
         }
         
     }
@@ -164,8 +138,10 @@ extension SearchBuilding: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = currentDataSource[indexPath.row]
+        cell.textLabel?.text = currentDataSource[indexPath.row].0
+        cell.detailTextLabel?.text = currentDataSource[indexPath.row].1
         return cell
     }
     
@@ -176,7 +152,7 @@ extension SearchBuilding: UISearchBarDelegate {
             searchController.isActive = false
             
             if let searchText = searchBar.text {
-                filterCurrentDataSource(searchTerm: searchText)
+                selectFeaturesForSearchTerm(searchText)
             }
         }
 
@@ -184,7 +160,7 @@ extension SearchBuilding: UISearchBarDelegate {
             searchController.isActive = false
             
             if let searchText = searchBar.text, !searchText.isEmpty {
-                restoreCurrentDataSource()
+                selectFeaturesForSearchTerm("")
             }
         }
 }
