@@ -15,7 +15,7 @@
 import UIKit
 import ArcGIS
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, AGSCalloutDelegate {
     
     @IBOutlet weak var mapView: AGSMapView!
     @IBOutlet var routeBBI: UIBarButtonItem!
@@ -47,7 +47,6 @@ class ViewController: UIViewController {
     //    let portalItem = AGSPortalItem(portal: portal, itemID: "c6f90b19164c4283884361005faea852")
     
     //    let vectorTileLayer = AGSArcGISVectorTiledLayer(url: URL(string:  "http://www.arcgis.com/home/item.html?id=850db44b9eb845d3bd42b19e8aa7a024"))
-    
 
     private func setupMap() {
         let baseBackdrop = URL(string: "https://arcgisruntime.maps.arcgis.com/home/item.html?id=850db44b9eb845d3bd42b19e8aa7a024")!
@@ -75,14 +74,34 @@ class ViewController: UIViewController {
         //mapView.map?.basemap = AGSBasemap(baseLayers: [baseBackdropLayer, BYUBaseLayer], referenceLayers: [])
     }
     
-    
+    private func showAlert(withStatus: String) {
+          let alertController = UIAlertController(title: "Alert", message:
+              withStatus, preferredStyle: UIAlertController.Style.alert)
+          alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertAction.Style.default,handler: nil))
+          present(alertController, animated: true, completion: nil)
+      }
+      
+    func setupLocationDisplay() -> AGSPoint {
+          mapView.locationDisplay.autoPanMode = AGSLocationDisplayAutoPanMode.compassNavigation
+          
+          mapView.locationDisplay.start { [weak self] (error:Error?) -> Void in
+              if let error = error {
+                  self?.showAlert(withStatus: error.localizedDescription)
+              }
+            print(self?.mapView.locationDisplay.location)
+          }
+        return self.mapView.locationDisplay.location.position
+      }
+
     override func viewDidLoad() {
         super.viewDidLoad()
 //        print("roomFeature extent", self.roomFeature?.geometry?.extent)
 
 //        (self.navigationItem.rightBarButtonItem as! SourceCodeBarButtonItem).filenames = ["FindRouteViewController", "DirectionsViewController"]
         setupMap()
-        self.start = AGSPoint(x: -111.649278, y: 40.249251, spatialReference: AGSSpatialReference.wgs84())
+//        setupLocationDisplay()
+//        self.start = AGSPoint(x: -111.649278, y: 40.249251, spatialReference: AGSSpatialReference.wgs84())
+        self.start = setupLocationDisplay()
         print("roomFeature point", self.roomFeature!.geometry!.extent.center)
         print("roomFeature x", self.roomFeature!.geometry!.extent.center.x)
         print("roomFeature x", self.roomFeature!.geometry!.extent.center.y)
@@ -136,6 +155,7 @@ class ViewController: UIViewController {
             })
         }
     }
+    
     
     func geoView(_ geoView: AGSGeoView, didTapAtScreenPoint screenPoint: CGPoint, mapPoint: AGSPoint) {
         if start == nil {
