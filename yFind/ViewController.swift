@@ -14,12 +14,15 @@
 
 import UIKit
 import ArcGIS
+import CoreLocation
 
 class ViewController: UIViewController, AGSCalloutDelegate {
     
     @IBOutlet weak var mapView: AGSMapView!
     @IBOutlet var routeBBI: UIBarButtonItem!
     @IBOutlet var directionsListBBI: UIBarButtonItem!
+    
+    var locationManager = CLLocationManager()
     
     //variables passed in
     var room:String? = ""
@@ -81,27 +84,31 @@ class ViewController: UIViewController, AGSCalloutDelegate {
           present(alertController, animated: true, completion: nil)
       }
       
-    func setupLocationDisplay() -> AGSPoint {
+    func setupLocationDisplay() {
           mapView.locationDisplay.autoPanMode = AGSLocationDisplayAutoPanMode.compassNavigation
-          
           mapView.locationDisplay.start { [weak self] (error:Error?) -> Void in
               if let error = error {
                   self?.showAlert(withStatus: error.localizedDescription)
               }
-            print(self?.mapView.locationDisplay.location)
           }
-        return self.mapView.locationDisplay.location.position
+        
       }
 
     override func viewDidLoad() {
+        locationManager.requestWhenInUseAuthorization()
+        var currentLoc: CLLocation!
+        if(CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+        CLLocationManager.authorizationStatus() == .authorizedAlways) {
+           currentLoc = locationManager.location
+           print(currentLoc.coordinate.latitude)
+           print(currentLoc.coordinate.longitude)
+        }
         super.viewDidLoad()
-//        print("roomFeature extent", self.roomFeature?.geometry?.extent)
 
-//        (self.navigationItem.rightBarButtonItem as! SourceCodeBarButtonItem).filenames = ["FindRouteViewController", "DirectionsViewController"]
         setupMap()
-//        setupLocationDisplay()
-//        self.start = AGSPoint(x: -111.649278, y: 40.249251, spatialReference: AGSSpatialReference.wgs84())
-        self.start = setupLocationDisplay()
+        setupLocationDisplay()
+        self.start = AGSPoint(x: currentLoc.coordinate.longitude, y: currentLoc.coordinate.latitude, spatialReference: AGSSpatialReference.wgs84())
+
         print("roomFeature point", self.roomFeature!.geometry!.extent.center)
         print("roomFeature x", self.roomFeature!.geometry!.extent.center.x)
         print("roomFeature x", self.roomFeature!.geometry!.extent.center.y)
