@@ -3,9 +3,9 @@
 
 target 'yFind' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-
+  use_modular_headers!
+  #use_frameworks!
+  pod 'ArcGIS-Runtime-SDK-iOS', '100.7.0'  
   # Pods for yFind
-	
-	pod 'ArcGIS-Runtime-SDK-iOS', '100.7'
+
 end
