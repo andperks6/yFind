@@ -22,6 +22,8 @@ class ViewController: UIViewController, AGSCalloutDelegate {
     @IBOutlet var routeBBI: UIBarButtonItem!
     @IBOutlet var directionsListBBI: UIBarButtonItem!
     
+    @IBOutlet weak var switchToGuided: UIButton!
+    
     var locationManager = CLLocationManager()
     
     //variables passed in
@@ -223,5 +225,11 @@ class ViewController: UIViewController, AGSCalloutDelegate {
         addMapMarker(location: location, style: .square, fillColor: endMarkerColor, outlineColor: .red)
         end = location
         findRoute()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "switchToGuided"){
+            let displayVC = segue.destination as! ARViewController
+        }
     }
 }

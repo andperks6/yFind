@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */; };
 		2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */; };
+		AB59332E3371A8F23E2158B2 /* libPods-yFind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */; };
 		D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A61E4D2AF800D6104E /* AppDelegate.swift */; };
 		D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A81E4D2AF800D6104E /* ViewController.swift */; };
 		D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AA1E4D2AF800D6104E /* Main.storyboard */; };
 		D9B060AE1E4D2AF800D6104E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AD1E4D2AF800D6104E /* Assets.xcassets */; };
 		D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */; };
+		E74CD92F240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */; };
 		E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EA23D265E300AE1924 /* SearchBuilding.swift */; };
 		E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EC23D2660400AE1924 /* SearchRoom.swift */; };
+		E75FE34C2405713F002104BA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75FE34B2405713F002104BA /* ARViewController.swift */; };
 		E77F100123D89F65000839DD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F100023D89F65000839DD /* ConfirmationView.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +48,10 @@
 		D9B060AD1E4D2AF800D6104E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B060B01E4D2AF800D6104E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B060B21E4D2AF800D6104E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libArcGIS-Runtime-Toolkit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75316EA23D265E300AE1924 /* SearchBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilding.swift; sourceTree = "<group>"; };
 		E75316EC23D2660400AE1924 /* SearchRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoom.swift; sourceTree = "<group>"; };
+		E75FE34B2405713F002104BA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		E77F100023D89F65000839DD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		E7DC7F3023F5B35500B748E5 /* yFind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yFind.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E74CD92F240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */,
+				AB59332E3371A8F23E2158B2 /* libPods-yFind.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,9 +92,10 @@
 			children = (
 				E7DC7F3023F5B35500B748E5 /* yFind.entitlements */,
 				2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */,
+				E75FE34B2405713F002104BA /* ARViewController.swift */,
+				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
 				2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */,
 				D9B060A61E4D2AF800D6104E /* AppDelegate.swift */,
-				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
 				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
 				E75316EC23D2660400AE1924 /* SearchRoom.swift */,
 				E77F100023D89F65000839DD /* ConfirmationView.swift */,
@@ -102,6 +110,7 @@
 		E721D10E23A9BE7B00CA86B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */,
 				9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */,
 			);
 			name = Frameworks;
@@ -129,6 +138,7 @@
 				D9B060A11E4D2AF800D6104E /* Resources */,
 				E7A38D9B23F666AB00088148 /* Embed Frameworks */,
 				E662B12E15597249F486D46D /* [CP] Embed Pods Frameworks */,
+				27890F6616D28BEDA8E7D0F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +200,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		27890F6616D28BEDA8E7D0F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-resources.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-Toolkit-iOS/Toolkit/ArcGISToolkit/Legend.storyboard",
+				"${PODS_ROOT}/ArcGIS-Runtime-Toolkit-iOS/Toolkit/ArcGISToolkit/Assets.xcassets",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Legend.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3CE08356A9624331F72EE678 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -239,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75FE34C2405713F002104BA /* ARViewController.swift in Sources */,
 				D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */,
 				2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */,
 				D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */,
