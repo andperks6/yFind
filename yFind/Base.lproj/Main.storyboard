@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FSV-ww-gA2">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,14 +19,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-rp-ARP" customClass="AGSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-rp-ARP" customClass="AGSMapView">
+                                <rect key="frame" x="0.0" y="52" width="375" height="595"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-AX-kE5">
+                                <rect key="frame" x="98" y="8" width="178" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="0.088988964970000001" green="0.15511528890000001" blue="0.32251862050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Switch to Guided View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5fr-XG-fbc" kind="show" identifier="switchToMap" id="833-ey-dl0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="fdQ-rp-ARP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2HH-rU-NFA"/>
+                            <constraint firstItem="fdQ-rp-ARP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" priority="1" id="2HH-rU-NFA"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fdQ-rp-ARP" secondAttribute="bottom" id="2hO-WB-5qd"/>
                             <constraint firstAttribute="trailing" secondItem="fdQ-rp-ARP" secondAttribute="trailing" id="2kP-26-fy2"/>
                             <constraint firstItem="fdQ-rp-ARP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FAh-TD-RFq"/>
@@ -35,11 +46,12 @@
                     <navigationItem key="navigationItem" id="CE0-nJ-bw6"/>
                     <connections>
                         <outlet property="mapView" destination="fdQ-rp-ARP" id="wuN-rS-IiF"/>
+                        <outlet property="switchToGuided" destination="ecE-AX-kE5" id="AnD-Rx-Nw9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="-558"/>
+            <point key="canvasLocation" x="32.799999999999997" y="-558.17091454272872"/>
         </scene>
         <!--Search Building-->
         <scene sceneID="BPy-kw-1mO">
@@ -230,6 +242,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zec-bS-2Oi">
+                                <rect key="frame" x="131" y="401" width="113" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <state key="normal" title="Go to AR (TEST)">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="5fr-XG-fbc" kind="show" id="Evc-qH-RmV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.13577114309999999" blue="0.28175599089999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -243,5 +267,50 @@
             </objects>
             <point key="canvasLocation" x="765.60000000000002" y="150.67466266866569"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="Xlo-D0-XUP">
+            <objects>
+                <viewController id="5fr-XG-fbc" customClass="ARViewController" customModule="yFind" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Kcr-Pi-ZmP"/>
+                        <viewControllerLayoutGuide type="bottom" id="JDX-aP-2Md"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ln5-oM-hz8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV9-vE-dzM">
+                                <rect key="frame" x="98" y="8" width="178" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.088988964970000001" green="0.15511528890000001" blue="0.32251862050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Switch to Map View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="switchToGuided" id="cLU-0R-fbq"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-Dy-P0B">
+                                <rect key="frame" x="0.0" y="81" width="375" height="566"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gJW-3d-wm2"/>
+                    <connections>
+                        <outlet property="cameraView" destination="lpL-Dy-P0B" id="HMA-Jq-fvj"/>
+                        <outlet property="switchToMap" destination="tV9-vE-dzM" id="DZd-b9-B8t"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13d-mh-8KF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="776.79999999999995" y="-558.17091454272872"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="833-ey-dl0"/>
+        <segue reference="cLU-0R-fbq"/>
+    </inferredMetricsTieBreakers>
 </document>

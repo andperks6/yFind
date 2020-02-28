@@ -1,16 +1,21 @@
 PODS:
   - ArcGIS-Runtime-SDK-iOS (100.7)
+  - ArcGIS-Runtime-Toolkit-iOS (100.7.1):
+    - ArcGIS-Runtime-SDK-iOS (~> 100.7.0)
 
 DEPENDENCIES:
-  - ArcGIS-Runtime-SDK-iOS (= 100.7.0)
+  - ArcGIS-Runtime-SDK-iOS
+  - ArcGIS-Runtime-Toolkit-iOS
 
 SPEC REPOS:
   trunk:
     - ArcGIS-Runtime-SDK-iOS
+    - ArcGIS-Runtime-Toolkit-iOS
 
 SPEC CHECKSUMS:
   ArcGIS-Runtime-SDK-iOS: 9a7e227d6779eaa16119b170b4e7861b02f5d83a
+  ArcGIS-Runtime-Toolkit-iOS: e93255e2977639ad9e6629e9b4e105b5faec3267
 
-PODFILE CHECKSUM: 160b3dabdcdc591a00baad034ce783d4edd65ecd
+PODFILE CHECKSUM: b03d7fc1eb9982ea47aaa015a1d65f142a202412
 
 COCOAPODS: 1.9.0
