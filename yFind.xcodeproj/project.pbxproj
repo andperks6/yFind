@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */; };
 		2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */; };
+		C59D2EE692745E744222766C /* libPods-yFind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */; };
 		D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A61E4D2AF800D6104E /* AppDelegate.swift */; };
 		D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A81E4D2AF800D6104E /* ViewController.swift */; };
 		D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AA1E4D2AF800D6104E /* Main.storyboard */; };
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C59D2EE692745E744222766C /* libPods-yFind.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
