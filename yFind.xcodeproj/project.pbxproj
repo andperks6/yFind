@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */; };
 		2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */; };
+		C59D2EE692745E744222766C /* libPods-yFind.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */; };
 		D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A61E4D2AF800D6104E /* AppDelegate.swift */; };
 		D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B060A81E4D2AF800D6104E /* ViewController.swift */; };
 		D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AA1E4D2AF800D6104E /* Main.storyboard */; };
@@ -16,19 +17,22 @@
 		D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */; };
 		E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EA23D265E300AE1924 /* SearchBuilding.swift */; };
 		E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EC23D2660400AE1924 /* SearchRoom.swift */; };
+		E75978BB240ABF3F0085DD33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B060B21E4D2AF800D6104E /* Info.plist */; };
+		E75978BD240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */; };
+		E75978BF240AC0160085DD33 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BE240AC0160085DD33 /* ArcGIS.framework */; };
+		E75978C0240AC0160085DD33 /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BE240AC0160085DD33 /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E75FE34C2405713F002104BA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75FE34B2405713F002104BA /* ARViewController.swift */; };
 		E77F100123D89F65000839DD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F100023D89F65000839DD /* ConfirmationView.swift */; };
-		E7F2E08C23E9C865006C60EC /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2E08B23E9C865006C60EC /* ArcGIS.framework */; };
-		E7F2E08D23E9C865006C60EC /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E7F2E08B23E9C865006C60EC /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2AA8A0DE23CCCA0B0034B75C /* Embed Frameworks */ = {
+		E7A38D9B23F666AB00088148 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E7F2E08D23E9C865006C60EC /* ArcGIS.framework in Embed Frameworks */,
+				E75978C0240AC0160085DD33 /* ArcGIS.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -36,8 +40,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1AE2A7B4EB3A5DF2FB506CB7 /* Pods-yFind.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yFind.debug.xcconfig"; path = "Target Support Files/Pods-yFind/Pods-yFind.debug.xcconfig"; sourceTree = "<group>"; };
 		2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FLQuery.storyboard; sourceTree = "<group>"; };
 		2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FLQueryViewController.swift; sourceTree = "<group>"; };
+		9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-yFind.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAF1D1777EFC73C2F1CC5448 /* Pods-yFind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yFind.release.xcconfig"; path = "Target Support Files/Pods-yFind/Pods-yFind.release.xcconfig"; sourceTree = "<group>"; };
 		D9B060A31E4D2AF800D6104E /* yFind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yFind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B060A61E4D2AF800D6104E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D9B060A81E4D2AF800D6104E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,10 +52,14 @@
 		D9B060AD1E4D2AF800D6104E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D9B060B01E4D2AF800D6104E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D9B060B21E4D2AF800D6104E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libArcGIS-Runtime-Toolkit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75316EA23D265E300AE1924 /* SearchBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilding.swift; sourceTree = "<group>"; };
 		E75316EC23D2660400AE1924 /* SearchRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoom.swift; sourceTree = "<group>"; };
+		E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libArcGIS-Runtime-Toolkit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E75978BE240AC0160085DD33 /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = "Pods/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework"; sourceTree = "<group>"; };
+		E75FE34B2405713F002104BA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		E77F100023D89F65000839DD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
-		E7F2E08B23E9C865006C60EC /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = ../../Library/SDKs/ArcGIS/iOS/Frameworks/Dynamic/ArcGIS.framework; sourceTree = "<group>"; };
+		E7DC7F3023F5B35500B748E5 /* yFind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yFind.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7F2E08C23E9C865006C60EC /* ArcGIS.framework in Frameworks */,
+				E75978BD240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */,
+				E75978BF240AC0160085DD33 /* ArcGIS.framework in Frameworks */,
+				C59D2EE692745E744222766C /* libPods-yFind.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +82,7 @@
 				D9B060A51E4D2AF800D6104E /* yFind */,
 				D9B060A41E4D2AF800D6104E /* Products */,
 				E721D10E23A9BE7B00CA86B5 /* Frameworks */,
+				F5C82964FCDF0B9A02930639 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -83,10 +97,12 @@
 		D9B060A51E4D2AF800D6104E /* yFind */ = {
 			isa = PBXGroup;
 			children = (
+				E7DC7F3023F5B35500B748E5 /* yFind.entitlements */,
 				2A49021A23D7E2CF006F86E6 /* FLQuery.storyboard */,
+				E75FE34B2405713F002104BA /* ARViewController.swift */,
+				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
 				2A49021B23D7E2D0006F86E6 /* FLQueryViewController.swift */,
 				D9B060A61E4D2AF800D6104E /* AppDelegate.swift */,
-				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
 				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
 				E75316EC23D2660400AE1924 /* SearchRoom.swift */,
 				E77F100023D89F65000839DD /* ConfirmationView.swift */,
@@ -101,9 +117,21 @@
 		E721D10E23A9BE7B00CA86B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E7F2E08B23E9C865006C60EC /* ArcGIS.framework */,
+				E75978BE240AC0160085DD33 /* ArcGIS.framework */,
+				E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */,
+				E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */,
+				9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F5C82964FCDF0B9A02930639 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1AE2A7B4EB3A5DF2FB506CB7 /* Pods-yFind.debug.xcconfig */,
+				AAF1D1777EFC73C2F1CC5448 /* Pods-yFind.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,11 +141,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D9B060B51E4D2AF800D6104E /* Build configuration list for PBXNativeTarget "yFind" */;
 			buildPhases = (
+				3CE08356A9624331F72EE678 /* [CP] Check Pods Manifest.lock */,
 				D9B0609F1E4D2AF800D6104E /* Sources */,
 				D9B060A01E4D2AF800D6104E /* Frameworks */,
 				D9B060A11E4D2AF800D6104E /* Resources */,
-				2AA8A0DE23CCCA0B0034B75C /* Embed Frameworks */,
-				E741471923A9C42C00B518A8 /* ShellScript */,
+				E7A38D9B23F666AB00088148 /* Embed Frameworks */,
+				E662B12E15597249F486D46D /* [CP] Embed Pods Frameworks */,
+				27890F6616D28BEDA8E7D0F9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -172,6 +202,7 @@
 				D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */,
 				2A49021C23D7E2D0006F86E6 /* FLQuery.storyboard in Resources */,
 				D9B060AE1E4D2AF800D6104E /* Assets.xcassets in Resources */,
+				E75978BB240ABF3F0085DD33 /* Info.plist in Resources */,
 				D9B060AC1E4D2AF800D6104E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -179,7 +210,27 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E741471923A9C42C00B518A8 /* ShellScript */ = {
+		27890F6616D28BEDA8E7D0F9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-resources.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-Toolkit-iOS/Toolkit/ArcGISToolkit/Legend.storyboard",
+				"${PODS_ROOT}/ArcGIS-Runtime-Toolkit-iOS/Toolkit/ArcGISToolkit/Assets.xcassets",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Legend.storyboardc",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/Assets.car",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3CE08356A9624331F72EE678 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -187,14 +238,39 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yFind-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework/strip-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E662B12E15597249F486D46D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-frameworks.sh",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework",
+				"${PODS_ROOT}/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ArcGIS.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/ArcGIS.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yFind/Pods-yFind-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -203,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E75FE34C2405713F002104BA /* ARViewController.swift in Sources */,
 				D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */,
 				2A49021D23D7E2D0006F86E6 /* FLQueryViewController.swift in Sources */,
 				D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */,
@@ -347,11 +424,20 @@
 		};
 		D9B060B61E4D2AF800D6104E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AE2A7B4EB3A5DF2FB506CB7 /* Pods-yFind.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yFind/yFind.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MPW4MLS84V;
-				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
+					"$(PROJECT_DIR)/Pods/ArcGIS-Runtime-SDK-iOS",
+				);
 				INFOPLIST_FILE = yFind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -362,6 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ycrew.yfind;
 				PRODUCT_NAME = yFind;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};
@@ -369,11 +456,20 @@
 		};
 		D9B060B71E4D2AF800D6104E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAF1D1777EFC73C2F1CC5448 /* Pods-yFind.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = yFind/yFind.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MPW4MLS84V;
-				FRAMEWORK_SEARCH_PATHS = "$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
+					"$(PROJECT_DIR)/Pods/ArcGIS-Runtime-SDK-iOS",
+				);
 				INFOPLIST_FILE = yFind/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -384,6 +480,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ycrew.yfind;
 				PRODUCT_NAME = yFind;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 5.0;
 			};

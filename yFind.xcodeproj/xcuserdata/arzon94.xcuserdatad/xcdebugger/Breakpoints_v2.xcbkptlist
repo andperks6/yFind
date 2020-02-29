@@ -20,5 +20,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "yFind/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - 3aebc0dbd33604bd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.start.getter : Swift.Optional&lt;__C.AGSPoint&gt;"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - efd174f5b85aa495"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.start.setter : Swift.Optional&lt;__C.AGSPoint&gt;"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "160">
+               </Location>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - 8417811d8fe75cb3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.start.modify : Swift.Optional&lt;__C.AGSPoint&gt;"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - d2da1376cdb72b52"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.start.modify : Swift.Optional&lt;__C.AGSPoint&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - 23e52f9529c8935c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; yFind.ViewController"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1024">
+               </Location>
+               <Location
+                  uuid = "7E6F224E-7BA5-4465-9783-CB3DF0508D0F - 4eff17cff7102d17"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "yFind.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;yFind.ViewController&gt;"
+                  moduleName = "yFind"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/arzon94/Downloads/yFind/yFind/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "974">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
