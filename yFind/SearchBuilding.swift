@@ -44,6 +44,7 @@ class SearchBuilding: UIViewController {
         let searchBar = searchController.searchBar
         searchBar.clipsToBounds = true;
         searchBar.sizeToFit()
+        searchBar.searchBarStyle = .minimal
         searchContainerView.clipsToBounds = true;
         searchContainerView.addSubview(searchBar)
         searchController.searchBar.delegate = self
@@ -127,14 +128,16 @@ extension SearchBuilding: UITableViewDelegate, UITableViewDataSource {
         
         self.selectedRow = currentDataSource[indexPath.row]
         
-        let alertController = UIAlertController(title: "Selection", message: "Selected \(currentDataSource[indexPath.row])", preferredStyle: .alert)
+        self.performSegue(withIdentifier: "bldgSegue", sender: nil)
         
-        searchController.isActive = false
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {_ in
-            self.performSegue(withIdentifier: "bldgSegue", sender: nil)})
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
+//        let alertController = UIAlertController(title: "Selection", message: "Selected \(currentDataSource[indexPath.row])", preferredStyle: .alert)
+//
+//        searchController.isActive = false
+//        
+//        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {_ in
+//            self.performSegue(withIdentifier: "bldgSegue", sender: nil)})
+//        alertController.addAction(okAction)
+//        present(alertController, animated: true, completion: nil)
         
 
     }

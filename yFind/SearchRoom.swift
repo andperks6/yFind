@@ -155,16 +155,16 @@ extension SearchRoom: UITableViewDelegate, UITableViewDataSource {
 //        print("extent: ", self.selectedFeature.geometry?.extent)
 //        print("center: ", self.selectedFeature.geometry?.extent.center)
 
-        let alertController = UIAlertController(title: "Selection", message: "Selected \(currentDataSource[indexPath.row])", preferredStyle: .alert)
-        
-        searchController.isActive = false
-        
-        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {_ in
-            self.performSegue(withIdentifier: "roomSegue", sender: nil)})
-        alertController.addAction(okAction)
-        present(alertController, animated: true, completion: nil)
-        
-
+//        let alertController = UIAlertController(title: "Selection", message: "Selected \(currentDataSource[indexPath.row])", preferredStyle: .alert)
+//
+//        searchController.isActive = false
+//        
+//        let okAction = UIAlertAction(title: "Ok", style: .default, handler: {_ in
+//            self.performSegue(withIdentifier: "roomSegue", sender: nil)})
+//        alertController.addAction(okAction)
+//        present(alertController, animated: true, completion: nil)
+//
+        self.performSegue(withIdentifier: "roomSegue", sender: nil)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
