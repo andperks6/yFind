@@ -35,11 +35,17 @@ class SearchBuilding: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+       
 
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchContainerView.addSubview(searchController.searchBar)
+        let searchBar = searchController.searchBar
+        searchBar.clipsToBounds = true;
+        searchBar.sizeToFit()
+        searchContainerView.clipsToBounds = true;
+        searchContainerView.addSubview(searchBar)
         searchController.searchBar.delegate = self
     }
     
