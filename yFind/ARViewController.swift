@@ -34,7 +34,8 @@ class ARViewController: UIViewController {
         arView.translatesAutoresizingMaskIntoConstraints = false
         let shadowColor = UIColor.lightGray.withAlphaComponent(0.5)
         let shadow = AGSSimpleMarkerSceneSymbol(style: .sphere, color: shadowColor, height: 0.01, width: 0.25, depth: 0.25, anchorPosition: .center)
-        let shadowGraphic = AGSGraphic(geometry: arView.arScreenToLocation(screenPoint: CGPoint(x: (arView.locationDataSource?.locationManager.location?.coordinate.latitude)!, y: (arView.locationDataSource?.locationManager.location?.coordinate.longitude)!)), symbol: shadow)
+        let point = CGPoint(x: (arView.locationDataSource?.locationManager.location?.coordinate.latitude)!, y: (arView.locationDataSource?.locationManager.location?.coordinate.longitude)!)
+        let shadowGraphic = AGSGraphic(geometry: arView.arScreenToLocation(screenPoint: point), symbol: shadow)
         graphicsOverlay.graphics.add(shadowGraphic)
         
         arView.sceneView.graphicsOverlays.add(graphicsOverlay)
