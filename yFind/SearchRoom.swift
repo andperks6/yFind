@@ -55,6 +55,12 @@ class SearchRoom: UIViewController {
         searchBar.clipsToBounds = true;
         searchBar.sizeToFit()
         searchBar.searchBarStyle = .minimal
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = .black;
+        let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView
+        glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
+        glassIconView?.tintColor = .black
+        searchBar.setImage(UIImage(named: "SearchIcon"), for: .search, state: .normal)
         searchContainerView.clipsToBounds = true;
         searchContainerView.addSubview(searchBar)
         searchController.searchBar.delegate = self
