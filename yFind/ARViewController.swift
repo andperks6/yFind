@@ -35,7 +35,11 @@ class ARViewController: UIViewController {
             arView.topAnchor.constraint(equalTo: view.topAnchor),
             arView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
+        
+            switchToMap.superview?.bringSubviewToFront(switchToMap)
     }
+    
+    
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
