@@ -72,14 +72,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="B1U-dE-Udb">
-                                <rect key="frame" x="11" y="182" width="353" height="337"/>
+                                <rect key="frame" x="0.0" y="182" width="375" height="337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="M75-FM-EjM" detailTextLabel="4jJ-N7-uCE" style="IBUITableViewCellStyleSubtitle" id="UMd-aD-YS6">
-                                        <rect key="frame" x="0.0" y="28" width="353" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UMd-aD-YS6" id="TeP-dY-3jM">
-                                            <rect key="frame" x="0.0" y="0.0" width="353" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M75-FM-EjM">
@@ -102,7 +102,7 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDE-WH-2p1">
-                                <rect key="frame" x="11" y="86" width="353" height="45"/>
+                                <rect key="frame" x="0.0" y="86" width="375" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="JFR-7U-rzt"/>
@@ -113,14 +113,14 @@
                         <constraints>
                             <constraint firstItem="bDE-WH-2p1" firstAttribute="top" secondItem="H7X-Sc-nRy" secondAttribute="bottom" constant="8" id="10u-02-KKt"/>
                             <constraint firstItem="B1U-dE-Udb" firstAttribute="top" secondItem="bDE-WH-2p1" secondAttribute="bottom" constant="1" id="3rB-C3-NLA"/>
-                            <constraint firstAttribute="trailing" secondItem="bDE-WH-2p1" secondAttribute="trailing" constant="11" id="5wv-EI-s7h"/>
+                            <constraint firstAttribute="trailing" secondItem="bDE-WH-2p1" secondAttribute="trailing" id="5wv-EI-s7h"/>
                             <constraint firstItem="B1U-dE-Udb" firstAttribute="trailing" secondItem="bDE-WH-2p1" secondAttribute="trailing" id="7G9-T1-OR4"/>
                             <constraint firstItem="H7X-Sc-nRy" firstAttribute="top" secondItem="NIY-RL-u0l" secondAttribute="bottom" constant="50" id="Z1p-2h-zdd"/>
                             <constraint firstItem="pqL-OZ-FXv" firstAttribute="top" secondItem="B1U-dE-Udb" secondAttribute="bottom" constant="243" id="bXF-Qa-I6b"/>
                             <constraint firstItem="H7X-Sc-nRy" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leadingMargin" constant="87" id="gdl-dL-Gcq"/>
                             <constraint firstItem="B1U-dE-Udb" firstAttribute="leading" secondItem="bDE-WH-2p1" secondAttribute="leading" id="hkJ-ej-HNX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="H7X-Sc-nRy" secondAttribute="trailing" constant="87" id="omT-rt-F0z"/>
-                            <constraint firstItem="bDE-WH-2p1" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leading" constant="11" id="tIZ-5g-9kq"/>
+                            <constraint firstItem="bDE-WH-2p1" firstAttribute="leading" secondItem="dFe-ki-bM9" secondAttribute="leading" id="tIZ-5g-9kq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wuW-Rg-YRq"/>
@@ -218,6 +218,9 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="yesButton:" destination="N5s-zi-lDH" eventType="touchUpInside" id="MNx-eS-D8d"/>
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="confirmationSegue" id="umt-PF-A49"/>
@@ -231,6 +234,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="FSV-ww-gA2" kind="show" id="3so-w1-fPw"/>
                                 </connections>
