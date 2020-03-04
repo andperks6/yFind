@@ -111,18 +111,18 @@ class ViewController: UIViewController, AGSCalloutDelegate {
         setupLocationDisplay()
         self.start = AGSPoint(x: currentLoc.coordinate.longitude, y: currentLoc.coordinate.latitude, spatialReference: AGSSpatialReference.wgs84())
 
-        print("roomFeature point", self.roomFeature!.geometry!.extent.center)
-        print("roomFeature x", self.roomFeature!.geometry!.extent.center.x)
-        print("roomFeature x", self.roomFeature!.geometry!.extent.center.y)
-        print("roomFeature copy", self.roomFeature!.geometry!.extent.center.copy())
-        print("roomFeature self", self.roomFeature!.geometry!.extent.center.self)
-        print("roomFeature spatial reference", self.roomFeature!.geometry!.extent.center.spatialReference)
+        print("roomFeature point", RoomVariables.selectedFeature!.geometry!.extent.center)
+        print("roomFeature x", RoomVariables.selectedFeature!.geometry!.extent.center.x)
+        print("roomFeature x", RoomVariables.selectedFeature!.geometry!.extent.center.y)
+        print("roomFeature copy", RoomVariables.selectedFeature!.geometry!.extent.center.copy())
+        print("roomFeature self", RoomVariables.selectedFeature!.geometry!.extent.center.self)
+        print("roomFeature spatial reference", RoomVariables.selectedFeature!.geometry!.extent.center.spatialReference)
 
         print("start point", self.start)
-        self.end = (self.roomFeature!.geometry!.extent.center) as AGSPoint
+        self.end = (RoomVariables.selectedFeature!.geometry!.extent.center) as AGSPoint
         setStartMarker(location: self.start!)
         print("end", self.end, "start", self.start)
-        setEndMarker(location: self.roomFeature!.geometry!.extent.center)
+        setEndMarker(location: RoomVariables.selectedFeature!.geometry!.extent.center)
     }
     private func findRoute() {
         routeTask.defaultRouteParameters { [weak self] (defaultParameters, error) in

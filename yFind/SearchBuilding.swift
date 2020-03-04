@@ -45,6 +45,11 @@ class SearchBuilding: UIViewController {
         searchBar.clipsToBounds = true;
         searchBar.sizeToFit()
         searchBar.searchBarStyle = .minimal
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = .black;
+        let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView
+        glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
+        glassIconView?.tintColor = .black
         searchContainerView.clipsToBounds = true;
         searchContainerView.addSubview(searchBar)
         searchController.searchBar.delegate = self

@@ -10,6 +10,13 @@ import Foundation
 import UIKit
 import ArcGIS
 
+struct RoomVariables {
+    
+    static var selectedFeature: AGSFeature!
+    
+}
+
+
 class SearchRoom: UIViewController {
    
     //Incoming bldg variable
@@ -44,7 +51,18 @@ class SearchRoom: UIViewController {
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchContainerView.addSubview(searchController.searchBar)
+        let searchBar = searchController.searchBar
+        searchBar.clipsToBounds = true;
+        searchBar.sizeToFit()
+        searchBar.searchBarStyle = .minimal
+        let textFieldInsideSearchBar = searchBar.value(forKey: "searchField") as? UITextField
+        textFieldInsideSearchBar?.textColor = .black;
+        let glassIconView = textFieldInsideSearchBar?.leftView as? UIImageView
+        glassIconView?.image = glassIconView?.image?.withRenderingMode(.alwaysTemplate)
+        glassIconView?.tintColor = .black
+        searchBar.setImage(UIImage(named: "SearchIcon"), for: .search, state: .normal)
+        searchContainerView.clipsToBounds = true;
+        searchContainerView.addSubview(searchBar)
         searchController.searchBar.delegate = self
         self.myLabel?.text = "Enter a Room Number for \(bldg ?? "This Building")"
     }
@@ -120,7 +138,7 @@ class SearchRoom: UIViewController {
             let displayVC = segue.destination as! ConfirmationView
             displayVC.room = self.selectedRow
             displayVC.bldg = bldg
-            displayVC.roomFeature = self.selectedFeature
+            displayVC.roomFeature = RoomVariables.selectedFeature
             displayVC.acronym = acronym
         }
     }
@@ -150,7 +168,7 @@ extension SearchRoom: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         self.selectedRow = currentDataSource[indexPath.row]
-        self.selectedFeature = selectedFeatures[indexPath.row]
+        RoomVariables.selectedFeature = selectedFeatures[indexPath.row]
 //        print(self.selectedFeature.geometry?.geometryType)
 //        print("extent: ", self.selectedFeature.geometry?.extent)
 //        print("center: ", self.selectedFeature.geometry?.extent.center)
