@@ -21,6 +21,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" misplaced="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdQ-rp-ARP" customClass="AGSMapView">
                                 <rect key="frame" x="0.0" y="52" width="375" height="595"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldb-Er-24Y">
+                                        <rect key="frame" x="114" y="540" width="149" height="28"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.088988964970000001" green="0.15511528890000001" blue="0.32251862050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Go Back to Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="FSV-ww-gA2" kind="show" id="rJc-Eh-kyQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="top" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ecE-AX-kE5">
@@ -268,6 +284,22 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-Dy-P0B">
                                 <rect key="frame" x="0.0" y="81" width="375" height="566"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FhX-dw-HQv">
+                                        <rect key="frame" x="113" y="510" width="149" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="0.088988964970000001" green="0.15511528890000001" blue="0.32251862050000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Go Back to Search">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="FSV-ww-gA2" kind="show" id="PQM-hC-Z17"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tV9-vE-dzM">
@@ -300,6 +332,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="gJW-3d-wm2"/>
                     <connections>
+                        <outlet property="backToSearchButton" destination="FhX-dw-HQv" id="NWT-Ea-MbO"/>
                         <outlet property="cameraView" destination="lpL-Dy-P0B" id="HMA-Jq-fvj"/>
                         <outlet property="switchToMap" destination="tV9-vE-dzM" id="DZd-b9-B8t"/>
                     </connections>
@@ -310,6 +343,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="PQM-hC-Z17"/>
         <segue reference="dOJ-0Y-gmD"/>
     </inferredMetricsTieBreakers>
 </document>

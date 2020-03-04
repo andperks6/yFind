@@ -17,6 +17,8 @@ class ARViewController: UIViewController {
     
     @IBOutlet weak var cameraView: UIView!
     
+    @IBOutlet weak var backToSearchButton: UIButton!
+    
     private let arView = ArcGISARView()
     
     /// Overlay used to display user-placed graphics.
@@ -53,6 +55,7 @@ class ARViewController: UIViewController {
             ])
         
             switchToMap.superview?.bringSubviewToFront(switchToMap)
+        backToSearchButton.superview?.bringSubviewToFront(backToSearchButton)
     }
     
     
