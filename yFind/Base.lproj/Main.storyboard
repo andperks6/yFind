@@ -33,7 +33,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="FSV-ww-gA2" kind="show" id="rJc-Eh-kyQ"/>
+                                            <segue destination="FSV-ww-gA2" kind="showDetail" id="rJc-Eh-kyQ"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -50,7 +50,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="5fr-XG-fbc" kind="show" identifier="switchToMap" id="833-ey-dl0"/>
+                                    <segue destination="5fr-XG-fbc" kind="showDetail" identifier="switchToMap" id="833-ey-dl0"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -136,7 +136,7 @@
                     <connections>
                         <outlet property="searchContainerView" destination="bDE-WH-2p1" id="VO6-ft-bFU"/>
                         <outlet property="tableView" destination="B1U-dE-Udb" id="iPK-fR-AQB"/>
-                        <segue destination="44Z-Dt-JSd" kind="show" identifier="bldgSegue" id="SpZ-Cr-8zL"/>
+                        <segue destination="44Z-Dt-JSd" kind="showDetail" identifier="bldgSegue" id="SpZ-Cr-8zL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z9k-zT-c3d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -200,7 +200,7 @@
                     <connections>
                         <outlet property="searchContainerView" destination="rJo-1w-ZbK" id="fT5-OJ-33g"/>
                         <outlet property="tableView" destination="rTZ-2J-842" id="g8X-Ya-VTH"/>
-                        <segue destination="nvq-Df-fl8" kind="show" identifier="roomSegue" id="BpU-Ab-h8Y"/>
+                        <segue destination="nvq-Df-fl8" kind="showDetail" identifier="roomSegue" id="BpU-Ab-h8Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tCo-sP-Nju" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -232,7 +232,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="yesButton:" destination="N5s-zi-lDH" eventType="touchUpInside" id="MNx-eS-D8d"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="confirmationSegue" id="umt-PF-A49"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" identifier="confirmationSegue" id="umt-PF-A49"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JfQ-BW-XFg">
@@ -247,7 +247,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="FSV-ww-gA2" kind="show" id="3so-w1-fPw"/>
+                                    <segue destination="FSV-ww-gA2" kind="showDetail" id="3so-w1-fPw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Go to *Room*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-gf-r7Z">
@@ -296,7 +296,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="FSV-ww-gA2" kind="show" id="PQM-hC-Z17"/>
+                                            <segue destination="FSV-ww-gA2" kind="showDetail" id="PQM-hC-Z17"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -315,7 +315,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="8"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="dOJ-0Y-gmD"/>
+                                    <segue destination="BYZ-38-t0r" kind="showDetail" id="dOJ-0Y-gmD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -343,7 +343,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PQM-hC-Z17"/>
-        <segue reference="dOJ-0Y-gmD"/>
+        <segue reference="rJc-Eh-kyQ"/>
+        <segue reference="umt-PF-A49"/>
     </inferredMetricsTieBreakers>
 </document>
