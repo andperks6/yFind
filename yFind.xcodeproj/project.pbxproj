@@ -167,7 +167,7 @@
 				TargetAttributes = {
 					D9B060A21E4D2AF800D6104E = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = JU9YXNJ356;
+						DevelopmentTeam = 4PCMAPG3W2;
 						LastSwiftMigration = 1130;
 						ProvisioningStyle = Automatic;
 					};
@@ -426,7 +426,7 @@
 				CODE_SIGN_ENTITLEMENTS = yFind/yFind.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JU9YXNJ356;
+				DEVELOPMENT_TEAM = 4PCMAPG3W2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
@@ -442,7 +442,7 @@
 					"-l",
 					"c++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.byu.jp1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byu;
 				PRODUCT_NAME = yFind;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -458,7 +458,7 @@
 				CODE_SIGN_ENTITLEMENTS = yFind/yFind.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JU9YXNJ356;
+				DEVELOPMENT_TEAM = 4PCMAPG3W2;
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(USER_LIBRARY_DIR)/SDKs/ArcGIS/iOS/Frameworks/Dynamic",
@@ -474,7 +474,7 @@
 					"-l",
 					"c++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.byu.jp1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.byu;
 				PRODUCT_NAME = yFind;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
