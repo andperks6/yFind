@@ -15,6 +15,7 @@
 		D9B060B11E4D2AF800D6104E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */; };
 		E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EA23D265E300AE1924 /* SearchBuilding.swift */; };
 		E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75316EC23D2660400AE1924 /* SearchRoom.swift */; };
+		E7564E672416A5A3003A4888 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7564E662416A5A3003A4888 /* TabBarController.swift */; };
 		E75978BB240ABF3F0085DD33 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D9B060B21E4D2AF800D6104E /* Info.plist */; };
 		E75978BD240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */; };
 		E75978BF240AC0160085DD33 /* ArcGIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BE240AC0160085DD33 /* ArcGIS.framework */; };
@@ -51,6 +52,7 @@
 		E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libArcGIS-Runtime-Toolkit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75316EA23D265E300AE1924 /* SearchBuilding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBuilding.swift; sourceTree = "<group>"; };
 		E75316EC23D2660400AE1924 /* SearchRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchRoom.swift; sourceTree = "<group>"; };
+		E7564E662416A5A3003A4888 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libArcGIS-Runtime-Toolkit-iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E75978BE240AC0160085DD33 /* ArcGIS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArcGIS.framework; path = "Pods/ArcGIS-Runtime-SDK-iOS/ArcGIS.framework"; sourceTree = "<group>"; };
 		E75FE34B2405713F002104BA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
 				E75316EC23D2660400AE1924 /* SearchRoom.swift */,
 				E77F100023D89F65000839DD /* ConfirmationView.swift */,
+				E7564E662416A5A3003A4888 /* TabBarController.swift */,
 				D9B060AA1E4D2AF800D6104E /* Main.storyboard */,
 				D9B060AD1E4D2AF800D6104E /* Assets.xcassets */,
 				D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */,
@@ -276,6 +279,7 @@
 				D9B060A91E4D2AF800D6104E /* ViewController.swift in Sources */,
 				D9B060A71E4D2AF800D6104E /* AppDelegate.swift in Sources */,
 				E77F100123D89F65000839DD /* ConfirmationView.swift in Sources */,
+				E7564E672416A5A3003A4888 /* TabBarController.swift in Sources */,
 				E75316ED23D2660400AE1924 /* SearchRoom.swift in Sources */,
 				E75316EB23D265E300AE1924 /* SearchBuilding.swift in Sources */,
 			);

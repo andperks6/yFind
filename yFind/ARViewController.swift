@@ -53,9 +53,6 @@ class ARViewController: UIViewController {
             arView.topAnchor.constraint(equalTo: view.topAnchor),
             arView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
             ])
-        
-            switchToMap.superview?.bringSubviewToFront(switchToMap)
-        backToSearchButton.superview?.bringSubviewToFront(backToSearchButton)
     }
     
     
@@ -95,11 +92,11 @@ class ARViewController: UIViewController {
     }
 
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "switchToMap"){
-            let displayVC = segue.destination as! ViewController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "switchToMap"){
+//            let displayVC = segue.destination as! ViewController
+//        }
+//    }
     
     
 

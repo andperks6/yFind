@@ -49,6 +49,7 @@ class SearchRoom: UIViewController {
         tableView.dataSource = self
 
         searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
@@ -109,10 +110,11 @@ class SearchRoom: UIViewController {
                 
             } else if let features = result?.featureEnumerator().allObjects {
                 if !features.isEmpty {
+                    self.currentDataSource = []
                     // display the selection
                     for feature in features{
 //                        print(feature.geometry)
-                        self.currentDataSource.append(feature.attributes.value(forKey: "RoomNumber") as! String)
+                    self.currentDataSource.append(feature.attributes.value(forKey: "RoomNumber") as! String)
                         self.tableView.reloadData()
                     }
                     
@@ -140,6 +142,7 @@ class SearchRoom: UIViewController {
             displayVC.bldg = bldg
             displayVC.roomFeature = RoomVariables.selectedFeature
             displayVC.acronym = acronym
+            searchController.isActive = false;
         }
     }
     
@@ -203,7 +206,6 @@ extension SearchRoom: UISearchBarDelegate {
             
             if let searchText = searchBar.text {
                 selectFeaturesForSearchTerm(searchText)
-//                filterCurrentDataSource(searchTerm: searchText)
             }
         }
 
