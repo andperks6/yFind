@@ -318,25 +318,15 @@
                         <viewControllerLayoutGuide type="top" id="Kcr-Pi-ZmP"/>
                         <viewControllerLayoutGuide type="bottom" id="JDX-aP-2Md"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ln5-oM-hz8">
+                    <view key="view" contentMode="scaleToFill" id="ln5-oM-hz8" customClass="ARSCNView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lpL-Dy-P0B">
-                                <rect key="frame" x="0.0" y="81" width="375" height="537"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
-                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="lpL-Dy-P0B" firstAttribute="leading" secondItem="ln5-oM-hz8" secondAttribute="leadingMargin" constant="-16" id="EgB-oe-a8T"/>
-                            <constraint firstItem="lpL-Dy-P0B" firstAttribute="bottom" secondItem="ln5-oM-hz8" secondAttribute="bottomMargin" id="yvk-EM-HsJ"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Guided View" image="camera.viewfinder" catalog="system" selectedImage="camera.viewfinder" id="bDW-0W-aHl"/>
                     <navigationItem key="navigationItem" id="gJW-3d-wm2"/>
                     <connections>
-                        <outlet property="cameraView" destination="lpL-Dy-P0B" id="HMA-Jq-fvj"/>
+                        <outlet property="sceneView" destination="ln5-oM-hz8" id="pOc-b5-3Vj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13d-mh-8KF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
