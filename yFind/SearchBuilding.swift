@@ -9,6 +9,7 @@
 import Foundation 
 import UIKit
 import ArcGIS
+import CoreLocation
 
 class SearchBuilding: UIViewController {
     
@@ -20,12 +21,14 @@ class SearchBuilding: UIViewController {
     var originalDataSource: [String] = []
     var currentDataSource: [(String, String)] = []
     var selectedRow: (String, String) = ("","")
+    var locationManager = CLLocationManager()
     
     private var featureTable: AGSServiceFeatureTable?
     private var selectedFeatures = [AGSFeature]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationManager.requestWhenInUseAuthorization()
         
         let indoorurl = URL(string: "https://services.arcgis.com/FvF9MZKp3JWPrSkg/arcgis/rest/services/BYU_Campus_Buildings/FeatureServer/0")!
         self.featureTable = AGSServiceFeatureTable(url: indoorurl)
@@ -35,10 +38,9 @@ class SearchBuilding: UIViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
-        
-       
-
+    
         searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         let searchBar = searchController.searchBar
@@ -109,6 +111,7 @@ class SearchBuilding: UIViewController {
                 let displayVC = segue.destination as! SearchRoom
             displayVC.bldg = self.selectedRow.1
             displayVC.acronym = self.selectedRow.0
+            searchController.isActive = false;
         }
     }
     

@@ -227,9 +227,9 @@ class ViewController: UIViewController, AGSCalloutDelegate {
         findRoute()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "switchToGuided"){
-            let displayVC = segue.destination as! ARViewController
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if(segue.identifier == "switchToGuided"){
+//            let displayVC = segue.destination as! ARViewController
+//        }
+//    }
 }
