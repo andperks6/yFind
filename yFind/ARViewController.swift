@@ -1,10 +1,13 @@
 import UIKit
 import SceneKit
 import ARKit
+import ArcGIS
 
 class ARViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    
+    var routePolyline:AGSPolyline?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,11 @@ class ARViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
+        let tabBar = tabBarController as! TabBarController
+        self.routePolyline = tabBar.routePolyline
+        if let routePolyline = routePolyline{
+            print("route Polyline: ",routePolyline)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

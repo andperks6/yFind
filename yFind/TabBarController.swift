@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import ArcGIS
 
 class TabBarController: UITabBarController {
 
     @IBOutlet weak var TabBar: UITabBar!
+    
+    var routePolyline:AGSPolyline?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

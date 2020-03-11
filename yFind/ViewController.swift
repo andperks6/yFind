@@ -16,7 +16,7 @@ import UIKit
 import ArcGIS
 import CoreLocation
 
-class ViewController: UIViewController, AGSCalloutDelegate {
+class ViewController: UIViewController, AGSCalloutDelegate, UITabBarControllerDelegate {
     
     @IBOutlet weak var mapView: AGSMapView!
     @IBOutlet var routeBBI: UIBarButtonItem!
@@ -32,6 +32,7 @@ class ViewController: UIViewController, AGSCalloutDelegate {
     var acronym:String? = ""
     var roomFeature: AGSFeature!
     
+    var routePolyline:AGSPolyline?
     let graphicsOverlay = AGSGraphicsOverlay()
     var start: AGSPoint?
     var end: AGSPoint?
@@ -106,22 +107,13 @@ class ViewController: UIViewController, AGSCalloutDelegate {
            print(currentLoc.coordinate.longitude)
         }
         super.viewDidLoad()
-
+        
         setupMap()
         setupLocationDisplay()
         self.start = AGSPoint(x: currentLoc.coordinate.longitude, y: currentLoc.coordinate.latitude, spatialReference: AGSSpatialReference.wgs84())
-
-        print("roomFeature point", RoomVariables.selectedFeature!.geometry!.extent.center)
-        print("roomFeature x", RoomVariables.selectedFeature!.geometry!.extent.center.x)
-        print("roomFeature x", RoomVariables.selectedFeature!.geometry!.extent.center.y)
-        print("roomFeature copy", RoomVariables.selectedFeature!.geometry!.extent.center.copy())
-        print("roomFeature self", RoomVariables.selectedFeature!.geometry!.extent.center.self)
-        print("roomFeature spatial reference", RoomVariables.selectedFeature!.geometry!.extent.center.spatialReference)
-
-        print("start point", self.start)
         self.end = (RoomVariables.selectedFeature!.geometry!.extent.center) as AGSPoint
         setStartMarker(location: self.start!)
-        print("end", self.end, "start", self.start)
+//        print("end", self.end, "start", self.start)
         setEndMarker(location: RoomVariables.selectedFeature!.geometry!.extent.center)
     }
     private func findRoute() {
@@ -143,6 +135,10 @@ class ViewController: UIViewController, AGSCalloutDelegate {
                 
                 if let firstRoute = result?.routes.first, let routePolyline = firstRoute.routeGeometry {
                     let routeSymbol = AGSSimpleLineSymbol(style: .solid, color: .blue, width: 4)
+//                  add route to data model in tabBarController
+                    let tabBar = self.tabBarController as! TabBarController
+                    tabBar.routePolyline = routePolyline
+                    
                     let routeGraphic = AGSGraphic(geometry: routePolyline, symbol: routeSymbol, attributes: nil)
 //                    self.graphicsOverlay.graphics.add(routeGraphic)
                     self.routeGraphicsOverlay.graphics.add(routeGraphic)
@@ -226,7 +222,6 @@ class ViewController: UIViewController, AGSCalloutDelegate {
         end = location
         findRoute()
     }
-    
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 //        if(segue.identifier == "switchToGuided"){
 //            let displayVC = segue.destination as! ARViewController
