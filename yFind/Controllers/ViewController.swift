@@ -16,7 +16,7 @@ import UIKit
 import ArcGIS
 import CoreLocation
 
-class ViewController: UIViewController, AGSCalloutDelegate, UITabBarControllerDelegate {
+class ViewController: UIViewController, AGSCalloutDelegate {
     
     @IBOutlet weak var mapView: AGSMapView!
     @IBOutlet var routeBBI: UIBarButtonItem!
