@@ -221,6 +221,8 @@ class ViewController: UIViewController, AGSCalloutDelegate {
         let endMarkerColor = UIColor(red:0.157, green:0.467, blue:0.886, alpha:1.000)
         addMapMarker(location: location, style: .square, fillColor: endMarkerColor, outlineColor: .red)
         end = location
+        let tabBar = self.tabBarController as! TabBarController
+        tabBar.end = end
         findRoute()
     }
 //    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

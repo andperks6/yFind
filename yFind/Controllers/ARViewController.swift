@@ -8,11 +8,21 @@ import CoreLocation
 class ARViewController: UIViewController {
     var sceneLocationView = SceneLocationView()
 //    @IBOutlet var sceneView: ARSCNView!
-    
+    var end: AGSPoint?
     var routePolyline:AGSPolyline?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tabBar = self.tabBarController as! TabBarController
+        end = tabBar.end
+        routePolyline = tabBar.routePolyline
+        let markerLatitude = end?.y
+        let markerLongitude = end?.x
+        let markerAltitude = end?.z
+        
+        print(markerLatitude)
+        print(markerLongitude)
+        print(markerAltitude)
 //        sceneView.delegate = self
 //        sceneView.showsStatistics = true
 //        sceneView.scene = SCNScene()
