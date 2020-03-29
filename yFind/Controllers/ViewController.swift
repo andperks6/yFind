@@ -33,6 +33,7 @@ class ViewController: UIViewController, AGSCalloutDelegate {
     var roomFeature: AGSFeature!
     
     var routePolyline:AGSPolyline?
+    
     let graphicsOverlay = AGSGraphicsOverlay()
     var start: AGSPoint?
     var end: AGSPoint?
