@@ -7,6 +7,7 @@ target 'yFind' do
   #use_frameworks!
   pod 'ArcGIS-Runtime-SDK-iOS'  
   pod 'ArcGIS-Runtime-Toolkit-iOS' 
+  pod 'ARCL'
   # Pods for yFind
 
 end
