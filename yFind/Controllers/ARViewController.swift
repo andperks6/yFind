@@ -3,6 +3,7 @@ import SceneKit
 import ARKit
 import ArcGIS
 import ARCL
+import MapKit
 import CoreLocation
 
 class ARViewController: UIViewController {
@@ -10,6 +11,8 @@ class ARViewController: UIViewController {
 //    @IBOutlet var sceneView: ARSCNView!
     var end: AGSPoint?
     var routePolyline:AGSPolyline?
+    var mapkitPolyline:MKPolyline?
+    var locations: Array<CLLocationCoordinate2D> = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,26 +20,6 @@ class ARViewController: UIViewController {
         end = tabBar.end
         routePolyline = tabBar.routePolyline
         
-        print(routePolyline?.parts[0].points)
-        print(routePolyline?.parts[0].endPoint)
-        print(routePolyline?.spatialReference)
-        
-        let markerLatitude = end?.y
-        let markerLongitude = end?.x
-        let markerAltitude = end?.z
-        
-        print(markerLatitude)
-        print(markerLongitude)
-        print(markerAltitude)
-//        sceneView.delegate = self
-//        sceneView.showsStatistics = true
-//        sceneView.scene = SCNScene()
-//        let circleNode = createSphereNode(with: 0.2, color: .gray)
-//        circleNode.position = SCNVector3(0, 0, -1) // 1 meter in front of camera
-//        sceneView.scene.rootNode.addChildNode(circleNode)
-
-//        Loop through process, create annotation node for destination and each point on the AGSPolyline. Add each to the location view
-        // altidue is in meters
         let coordinate = CLLocationCoordinate2D(latitude: routePolyline?.parts[0].endPoint?.y ?? 0, longitude: routePolyline?.parts[0].endPoint?.x ?? 0)
         let location = CLLocation(coordinate: coordinate, altitude: 793)
         let image = UIImage(named: "mapPin")!
@@ -47,13 +30,31 @@ class ARViewController: UIViewController {
         for p in 0..<((routePolyline?.parts[0].points.count)!-1) {
             let coordinate = CLLocationCoordinate2D(latitude: routePolyline?.parts[0].points[p].y ?? 0, longitude: routePolyline?.parts[0].points[p].x ?? 0)
             let location = CLLocation(coordinate: coordinate, altitude: 793)
-            let image = UIImage(named: "blueDot")!
-
-            let annotationNode = LocationAnnotationNode(location: location, image: image)
-            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+            locations.append(location.coordinate)
+//            let image = UIImage(named: "blueDot")!
+//            let annotationNode = LocationAnnotationNode(location: location, image: image)
+//            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+            
+            
+            //get previous location to draw line from point to point
+            
+//           if(p - 1 > 0){
+//               let coordinate2 = CLLocationCoordinate2D(latitude: routePolyline?.parts[0].points[p - 1].y ?? 0, longitude: routePolyline?.parts[0].points[p - 1].x ?? 0)
+//               let location2 = CLLocation(coordinate: coordinate2, altitude: 793)
+//               let annotationNode2 = LocationAnnotationNode(location: location2, image: image)
+//               let toPoint = annotationNode.eulerAngles
+//               let fromPoint = annotationNode2.eulerAngles
+//               let line = lineFrom(vector: fromPoint, toVector: toPoint)
+//               let lineNode = SCNNode(geometry: line)
+//               lineNode.geometry?.firstMaterial?.diffuse.contents = UIColor.white
+//               sceneLocationView.sceneNode?.addChildNode(lineNode)
+//           }
         }
-//End loop
+        let polyline = MKPolyline(coordinates: &locations, count: locations.count)
         
+        var mkpolys: Array<MKPolyline> = []
+        mkpolys.append(polyline)
+        sceneLocationView.addPolylines(polylines: mkpolys)
         sceneLocationView.run()
         view.addSubview(sceneLocationView)
     }
@@ -85,5 +86,13 @@ class ARViewController: UIViewController {
         geometry.firstMaterial?.diffuse.contents = color
         let sphereNode = SCNNode(geometry: geometry)
         return sphereNode
+    }
+    
+    func lineFrom(vector vector1: SCNVector3, toVector vector2: SCNVector3) -> SCNGeometry {
+        let indices: [Int32] = [0, 1]
+        let source = SCNGeometrySource(vertices: [vector1, vector2])
+        let element = SCNGeometryElement(indices: indices, primitiveType: .line)
+        return SCNGeometry(sources: [source], elements: [element])
+        
     }
 }
