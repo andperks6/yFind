@@ -16,6 +16,11 @@ class ARViewController: UIViewController {
         let tabBar = self.tabBarController as! TabBarController
         end = tabBar.end
         routePolyline = tabBar.routePolyline
+        
+        print(routePolyline?.parts[0].points)
+        print(routePolyline?.parts[0].endPoint)
+        print(routePolyline?.spatialReference)
+        
         let markerLatitude = end?.y
         let markerLongitude = end?.x
         let markerAltitude = end?.z
@@ -32,12 +37,21 @@ class ARViewController: UIViewController {
 
 //        Loop through process, create annotation node for destination and each point on the AGSPolyline. Add each to the location view
         // altidue is in meters
-        let coordinate = CLLocationCoordinate2D(latitude: 43.62543911527655, longitude: -116.3788297120482)
+        let coordinate = CLLocationCoordinate2D(latitude: routePolyline?.parts[0].endPoint?.y ?? 0, longitude: routePolyline?.parts[0].endPoint?.x ?? 0)
         let location = CLLocation(coordinate: coordinate, altitude: 793)
         let image = UIImage(named: "mapPin")!
 
         let annotationNode = LocationAnnotationNode(location: location, image: image)
         sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        
+        for p in 0..<((routePolyline?.parts[0].points.count)!-1) {
+            let coordinate = CLLocationCoordinate2D(latitude: routePolyline?.parts[0].points[p].y ?? 0, longitude: routePolyline?.parts[0].points[p].x ?? 0)
+            let location = CLLocation(coordinate: coordinate, altitude: 793)
+            let image = UIImage(named: "blueDot")!
+
+            let annotationNode = LocationAnnotationNode(location: location, image: image)
+            sceneLocationView.addLocationNodeWithConfirmedLocation(locationNode: annotationNode)
+        }
 //End loop
         
         sceneLocationView.run()
