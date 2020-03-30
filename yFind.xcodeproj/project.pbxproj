@@ -22,6 +22,7 @@
 		E75978C0240AC0160085DD33 /* ArcGIS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E75978BE240AC0160085DD33 /* ArcGIS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E75FE34C2405713F002104BA /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75FE34B2405713F002104BA /* ARViewController.swift */; };
 		E77F100123D89F65000839DD /* ConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E77F100023D89F65000839DD /* ConfirmationView.swift */; };
+		E7FC84742430390800D5E6F8 /* libARCL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E7FC84732430390800D5E6F8 /* libARCL.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		E75FE34B2405713F002104BA /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		E77F100023D89F65000839DD /* ConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmationView.swift; sourceTree = "<group>"; };
 		E7DC7F3023F5B35500B748E5 /* yFind.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = yFind.entitlements; sourceTree = "<group>"; };
+		E7FC84732430390800D5E6F8 /* libARCL.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libARCL.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E75978BD240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a in Frameworks */,
+				E7FC84742430390800D5E6F8 /* libARCL.a in Frameworks */,
 				E75978BF240AC0160085DD33 /* ArcGIS.framework in Frameworks */,
 				C59D2EE692745E744222766C /* libPods-yFind.a in Frameworks */,
 			);
@@ -95,14 +98,8 @@
 		D9B060A51E4D2AF800D6104E /* yFind */ = {
 			isa = PBXGroup;
 			children = (
+				E73AA4292417E42700843AFD /* Controllers */,
 				E7DC7F3023F5B35500B748E5 /* yFind.entitlements */,
-				E75FE34B2405713F002104BA /* ARViewController.swift */,
-				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
-				D9B060A61E4D2AF800D6104E /* AppDelegate.swift */,
-				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
-				E75316EC23D2660400AE1924 /* SearchRoom.swift */,
-				E77F100023D89F65000839DD /* ConfirmationView.swift */,
-				E7564E662416A5A3003A4888 /* TabBarController.swift */,
 				D9B060AA1E4D2AF800D6104E /* Main.storyboard */,
 				D9B060AD1E4D2AF800D6104E /* Assets.xcassets */,
 				D9B060AF1E4D2AF800D6104E /* LaunchScreen.storyboard */,
@@ -114,12 +111,27 @@
 		E721D10E23A9BE7B00CA86B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E7FC84732430390800D5E6F8 /* libARCL.a */,
 				E75978BE240AC0160085DD33 /* ArcGIS.framework */,
 				E75978BC240AC0080085DD33 /* libArcGIS-Runtime-Toolkit-iOS.a */,
 				E74CD92E240578F7006E4DD7 /* libArcGIS-Runtime-Toolkit-iOS.a */,
 				9B5B846D787FEC4E1968BD5E /* libPods-yFind.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E73AA4292417E42700843AFD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E75FE34B2405713F002104BA /* ARViewController.swift */,
+				D9B060A81E4D2AF800D6104E /* ViewController.swift */,
+				D9B060A61E4D2AF800D6104E /* AppDelegate.swift */,
+				E75316EA23D265E300AE1924 /* SearchBuilding.swift */,
+				E75316EC23D2660400AE1924 /* SearchRoom.swift */,
+				E77F100023D89F65000839DD /* ConfirmationView.swift */,
+				E7564E662416A5A3003A4888 /* TabBarController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		F5C82964FCDF0B9A02930639 /* Pods */ = {

@@ -325,9 +325,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Guided View" image="camera.viewfinder" catalog="system" selectedImage="camera.viewfinder" id="bDW-0W-aHl"/>
                     <navigationItem key="navigationItem" id="gJW-3d-wm2"/>
-                    <connections>
-                        <outlet property="sceneView" destination="ln5-oM-hz8" id="pOc-b5-3Vj"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13d-mh-8KF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
