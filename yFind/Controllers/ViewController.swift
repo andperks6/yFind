@@ -123,9 +123,9 @@ class ViewController: UIViewController, AGSCalloutDelegate {
                 print("Error getting default parameters: \(error!.localizedDescription)")
                 return
             }
-            
             guard let params = defaultParameters, let self = self, let start = self.start, let end = self.end else { return }
-            
+            let walkMode = self.routeTask.routeTaskInfo().travelModes[5]
+            params.travelMode = walkMode
             params.setStops([AGSStop(point: start), AGSStop(point: end)])
             
             self.routeTask.solveRoute(with: params, completion: { (result, error) in
