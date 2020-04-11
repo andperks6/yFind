@@ -74,7 +74,7 @@ class SearchBuilding: UIViewController {
         }
         
         let queryParams = AGSQueryParameters()
-        queryParams.whereClause = "(upper(Name) LIKE '%\(searchTerm.uppercased())%' OR Upper(Acronym) LIKE '%\(searchTerm.uppercased())%') AND Acronym != '' "
+        queryParams.whereClause = "(upper(Name) LIKE '%\(searchTerm.uppercased())%' OR Upper(Acronym) LIKE '%\(searchTerm.uppercased())%')"
         queryParams.orderByFields = [AGSOrderBy(fieldName: "Acronym", sortOrder: .ascending)]
             featureTable.queryFeatures(with: queryParams) { [weak self] (result: AGSFeatureQueryResult?, error: Error?) in
             guard let self = self else {
